@@ -2,7 +2,7 @@ from estoque.armazem import Normal
 from estoque.constante import PRODUTOS
 
 class Loja:  
-    def __init__(self, produtos):
+    def __init__(self):
         self.produtos = []
 
 
