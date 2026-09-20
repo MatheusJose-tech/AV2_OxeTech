@@ -19,7 +19,9 @@ class Queijo_envelhecido(Normal):
         self.dias_vendas -= 1
 
         aumento_qualidade = 2 if self.qualidade < 0 else 1
-        self.qualidade = min(50, max(0, self.qualidade + aumento_qualidade))
+        nova_qualidade = self.qualidade + aumento_qualidade 
+
+        self.qualidade = min(50, max(0, nova_qualidade))
         
 class Sulfuras(Normal):
 
