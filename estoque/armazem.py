@@ -1,12 +1,12 @@
 class Produto():
 
     def __init__(self, nome, dias_vendas, qualidade):
-            self.nome = nome
-            self.dias_vendas = dias_vendas
-            self.qualidade = qualidade
+        self.nome = nome
+        self.dias_vendas = dias_vendas
+        self.qualidade = qualidade
 
     def atualizar(self):
-        raise NotImplementedError
+        raise NotImplementedError("Cada tipo de produto deve definir sua própria regra de atualizar()")
 
 class Normal(Produto):
 
