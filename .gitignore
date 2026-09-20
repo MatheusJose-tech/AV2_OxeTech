@@ -11,6 +11,8 @@ env/
 
 # Cobertura de testes
 .pytest_cache/
+.coverage
+
 
 
 
