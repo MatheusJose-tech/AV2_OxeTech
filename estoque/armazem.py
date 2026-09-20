@@ -1,8 +1,14 @@
-class Normal():
+class Produto():
+
     def __init__(self, nome, dias_vendas, qualidade):
         self.nome = nome
         self.dias_vendas = dias_vendas
         self.qualidade = qualidade
+
+    def atualizar(self):
+        raise NotImplementedError("Cada tipo de produto deve definir sua própria regra de atualizar()")
+
+class Normal(Produto):
 
     def atualizar(self):
 
@@ -13,7 +19,7 @@ class Normal():
 
         self.qualidade = min(50, max(0, nova_qualidade))
 
-class Queijo_envelhecido(Normal):
+class Queijo_envelhecido(Produto):
 
     def atualizar(self):
         self.dias_vendas -= 1
@@ -23,12 +29,12 @@ class Queijo_envelhecido(Normal):
 
         self.qualidade = min(50, max(0, nova_qualidade))
         
-class Sulfuras(Normal):
+class Sulfuras(Produto):
 
     def atualizar(self):
         self.qualidade = 80
         
-class Ingressos_de_show(Normal):
+class Ingressos_de_show(Produto):
 
     def atualizar(self):
 

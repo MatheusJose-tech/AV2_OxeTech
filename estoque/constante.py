@@ -1,4 +1,4 @@
-from armazem import *
+from estoque.armazem import *
 
 PRODUTOS = {
     "Aged Brie": Queijo_envelhecido,
