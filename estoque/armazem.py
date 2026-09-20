@@ -18,7 +18,7 @@ class Queijo_envelhecido(Normal):
     def atualizar(self):
         self.dias_vendas -= 1
 
-        aumento_qualidade = 2 if self.qualidade < 0 else 1
+        aumento_qualidade = 2 if self.dias_vendas < 0 else 1
         nova_qualidade = self.qualidade + aumento_qualidade 
 
         self.qualidade = min(50, max(0, nova_qualidade))
