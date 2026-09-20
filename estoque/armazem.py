@@ -11,7 +11,7 @@ class Normal():
         perca_qualidade = 2 if self.dias_vendas < 0 else 1
         nova_qualidade = self.qualidade - perca_qualidade
 
-        self.qualidade = min(50, max(0, self.qualidade - perca_qualidade))
+        self.qualidade = min(50, max(0, nova_qualidade))
 
 class Queijo_envelhecido(Normal):
 
