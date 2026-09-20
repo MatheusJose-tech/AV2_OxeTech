@@ -1,7 +1,5 @@
 # Python
 __pycache__/
-*.py[cod]
-*$py.class
 
 # Ambientes virtuais
 .venv/
@@ -12,14 +10,7 @@ env/
 .pytest_cache/
 
 # Cobertura de testes
-.coverage
-htmlcov/
 .pytest_cache/
 
-# IDE
-.vscode/
-.idea/
 
-# Sistema operacional
-.DS_Store
-Thumbs.db
+
