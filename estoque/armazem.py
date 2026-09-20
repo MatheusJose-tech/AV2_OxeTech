@@ -59,3 +59,13 @@ class Ingressos_de_show(Produto):
 
         self.qualidade = min(50, max(0, self.qualidade + aumento_qualidade))
 
+class Item_conjurado(Produto):
+
+    def atualizar(self):
+    
+            self.dias_vendas -= 1
+    
+            perca_qualidade = 4 if self.dias_vendas < 0 else 2
+            nova_qualidade = self.qualidade - perca_qualidade
+    
+            self.qualidade = min(50, max(0, nova_qualidade))
